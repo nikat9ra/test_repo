@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello world")
+	printMessage("Vasya")
+	printMessage("Petya")
+	printMessage("Ivan")
+}
+func printMessage(message string) {
+	fmt.Println(message)
 }
