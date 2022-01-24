@@ -1,25 +1,19 @@
 package main
 
-import (
-	"errors"
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	// messages := []string{"1", "2", "3"}
-	messages := make([]string, 5, 15)
-	messages[0] = "1"
-	// printMessage(messages)
+	matrix := make([][]int, 10)
+	counter := 0
+	for x := 0; x < 10; x++ {
 
-	fmt.Println(messages)
-}
-func printMessage(messages []string) error {
+		matrix[x] = make([]int, 10)
+		for y := 0; y < 10; y++ {
+			counter++
+			matrix[x][y] = counter
 
-	if len(messages) == 0 {
-		return errors.New("empty array")
+		}
+		fmt.Println(matrix[x])
 	}
-	messages[1] = "5"
-	fmt.Println(messages)
 
-	return nil
 }
